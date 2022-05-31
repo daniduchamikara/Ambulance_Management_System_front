@@ -1,0 +1,38 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <div class="card-header text-secondary">
+      <div class="row">
+        <div class="col">
+          <h4>Ambulances</h4>
+        </div>
+        <div class="form-inline my-2 my-lg-0">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="panel panel-default border rounded p-3">
+      <table class="table table-striped ">
+        <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">ambulance</th>
+          <th scope="col">Driver Name</th>
+          <th scope="col">Trip Date</th>
+          <th scope="col">Trip Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let trip of trips">
+          <td>{{trip.tripId}}</td>
+          <td>{{trip.ambulanceId}}</td>
+          <td>{{trip.driverName}}</td>
+          <td>{{trip.createdDate}}</td>
+          <td>{{trip.tripType}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</main>
